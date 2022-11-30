@@ -17,19 +17,31 @@ public class Fahrplan {
         char bisWolfsburg = ' ';
         char bisBraunschweig = ' ';
 
-        if(endetIn == 'h'){
+        if (endetIn == 'h') {
             haltInSpandau = 'n';
             richtungHamburg = 'n';
-            haltInStendal = 'j';
-            bisWolfsburg = 'j';
-            bisBraunschweig = 'j';
+            haltInStendal = 'n';
+            bisWolfsburg = 'n';
+            bisBraunschweig = 'n';
         } else if (endetIn == 'w') {
             haltInSpandau = 'n';
             richtungHamburg = 'n';
-            haltInStendal = 'j';
+            haltInStendal = 'n';
             bisWolfsburg = 'j';
+            bisBraunschweig = 'n';
+        } else if (endetIn == 'b') {
+            haltInSpandau = 'n';
+            richtungHamburg = 'n';
+            haltInStendal = 'n';
+            bisWolfsburg = 'n';
             bisBraunschweig = 'j';
-        } else if (endetIn == 'w')
+        } else if (endetIn == '2') {
+            haltInSpandau = 'n';
+            richtungHamburg = 'j';
+            haltInStendal = 'n';
+            bisWolfsburg = 'n';
+            bisBraunschweig = 'n';
+        }
 
 
         fahrzeit = fahrzeit + 8; // Fahrzeit Hbf -> Spandau
