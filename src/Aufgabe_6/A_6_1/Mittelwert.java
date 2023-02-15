@@ -1,3 +1,5 @@
+package Aufgabe_6.A_6_1;
+
 public class Mittelwert {
 
     public static void main(String[] args) {
@@ -21,7 +23,7 @@ public class Mittelwert {
         System.out.printf("Der Mittelwert von %.2f und %.2f ist %.2f\n", x, y, m);
     }
 
-    private static double berechneMittelwert(double x, double y){
+    private static double berechneMittelwert(double x, double y) {
         return (x + y) / 2.0;
     }
 }
