@@ -7,16 +7,14 @@ public class Willkommen {
     public static void main(String[] args) {
 
         double zuZahlenderBetrag;
-        double rueckgabewert;
         double eingezahlterGesamtbetrag;
+        Scanner tastatur = new Scanner(System.in);
 
         begreussung();
-
-        Scanner tastatur = new Scanner(System.in);
         zuZahlenderBetrag = fahrkartenbestellungErfassen(tastatur);
         eingezahlterGesamtbetrag = fahrkartenBezahlen(tastatur, zuZahlenderBetrag);
-
-        fahrkartenAusgeben(eingezahlterGesamtbetrag);
+        fahrkartenAusgeben();
+        rueckgeldAusgeben(zuZahlenderBetrag, eingezahlterGesamtbetrag);
     }
 
     // Willkommen - Aufgabe 6.2.1
@@ -56,25 +54,27 @@ public class Willkommen {
 
         zuZahlenderBetrag = ticketPreis * anzahlTickets;
 
+        System.out.println(Math.round(zuZahlenderBetrag * 100.0) / 100.0 + "0" + "€");
+
         return zuZahlenderBetrag;
     }
 
     // Geldeinwurf - Aufgabe 6.2.3
     public static double fahrkartenBezahlen(Scanner tastatur, double zuZahlenderBetrag) {
 
+        zuZahlenderBetrag = 10;
 
         return zuZahlenderBetrag;
     }
 
     // Fahrkartenausgabe - Aufgabe 6.2.4
-    public static void fahrkartenAusgeben(double eingezahlterGesamtbetrag) {
+    public static void fahrkartenAusgeben() {
         System.out.println("\nFahrschein wird ausgegeben");
         System.out.println("========");
-
-        System.out.println(Math.round(eingezahlterGesamtbetrag * 100.0) / 100.0 + "0" + "€");
     }
 
-    public static void rueckgeldAusgeben(){
+    // Rückgeldausgabe - Aufgabe 6.2.5
+    public static void rueckgeldAusgeben(double zuZahlenderBetrag, double eingezahlterGesamtbetrag){
 
     }
 
