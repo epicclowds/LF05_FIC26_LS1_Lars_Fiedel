@@ -7,7 +7,6 @@ public class ArrayUebung {
 
     public static void main(String args[]) {
 
-
         // 1. Deklaration eines Arrays für ganze Zahlen.
         int[] numbers;
 
